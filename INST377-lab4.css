@@ -1,0 +1,60 @@
+body {
+    background-color: lightblue;
+}
+
+.topRow {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.bottomRow {
+    display: flex;
+    margin-left: 20px;
+}
+
+.contactContainer {
+    text-align: center;
+    background-color: purple;
+    color: white;
+    border: 5px solid white;
+    border-radius: 15px;
+    margin-right: 30px;
+    padding-top: 10px;
+    width: 40%;
+    height: 60px;
+}
+
+.testerContainer {
+    text-align: center;
+    background-color: purple;
+    color: white;
+    border: 5px solid white;
+    border-radius: 15px;
+    margin-right: 30px;
+    padding-top: 10px;
+    width: 40%;
+    height: 60px;
+}
+
+.colorContainer {
+    text-align: center;
+    background-color: purple;
+    border: 5px solid white;
+    border-radius: 15px;
+    padding-top: 10px;
+    width: 40%;
+    height: 45px;
+}
+
+.addTextContainer {
+    text-align: center;
+    background-color: purple;
+    border: 5px solid white;
+    border-radius: 15px;
+    padding-top: 10px;
+    width: 40%;
+    height: 45px;
+}
+

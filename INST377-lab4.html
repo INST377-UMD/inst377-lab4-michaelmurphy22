@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Michael Murphy Lab 4</title>
+        <link rel="stylesheet" href="INST377-lab4.css">
+    </head>
+
+    <body>
+        <h1 id="originalHeading">INST377 - Lab 4</h1>
+        <!--Top Row-->
+        <div class="topRow">
+            <!--Alert Me Section-->
+            <div class="contactContainer">
+                <form name="contactForm" onsubmit="return formValidation()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <input type="submit" value="Alert Me!">
+                </form>
+            </div>
+        
+            <!--Change Color Section-->
+            <div class="colorContainer">
+                <button id="colorButton" onclick="changeColor()">Change Color</button>
+            </div>
+        </div>
+
+        <!--Bottom Row-->
+        <div class="bottomRow">
+            <!--Text Tester Section-->
+            <div class="testerContainer">
+                <form name="textTester" onsubmit="return validateText()">
+                    <label for="textInput">Text Tester:</label>
+                    <input type="text" id="textInput">
+                    <input type="submit" value="Validate Text">
+                </form>
+            </div>  
+
+            <!--Add Text Section-->
+            <div class="addTextContainer">
+                <button onclick="addText()">Add Text</button>
+            </div>  
+        </div>    
+
+        <!--Javascript Code-->
+        <script type="text/javascript">
+            function formValidation() {
+                console.log('Trying to Alert Name:', document.contactForm.name.value)
+                let nameInput = (document.getElementById("name").value.trim());
+                    if (nameInput !=="") {
+                        alert("Hi " + nameInput + "!");
+                        return false;
+                    }
+                }
+
+                console.log('Succesfully Alerted Name', document.getElementById("name").value)
+
+            function changeColor() {
+                console.log('Attempting to background color of the page, current color is: ', document.body.style.backgroundColor)
+                if (document.body.style.backgroundColor == 'green') {
+                    document.body.style.backgroundColor = 'lightblue';
+                } else {
+                    document.body.style.backgroundColor = 'green';
+                }
+
+                console.log('Succesfully changed color of text, new color:', document.body.style.backgroundColor)
+            }
+
+            function validateText() {
+                console.log('Tying to validate the textTester', document.textTester.textInput.value)
+                const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if (validationRegex.test(document.textTester.textInput.value)) {
+                    alert('There is a special character in your text')
+                    
+                    return false
+                }
+            }
+
+            function addText() {
+                document.getElementById("originalHeading").textContent += " Adding Text";
+            }
+
+            
+            
+        </script>
+
+
+    </body>
+</html>
